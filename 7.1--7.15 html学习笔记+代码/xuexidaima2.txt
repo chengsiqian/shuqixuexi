@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ch-zn">
+ <head>
+  <title>sum2</title>
+  <meta charset="utf-8">
+  <meta name="author" content="liyue">
+  <meta name="keywords" content="html5,js,css">
+  <meta http-equiv="refresh" content="300,http://www.baidu.com/">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scale=no">
+  <style type="text/css">
+   body{width:100%;height:708px;background:#F8F8FF;padding:0;margin:0;}
+   header{width:100%;height:10%;background:#FFF8DC;}
+   aside{width:20%;height:80%;background:#DCDCDC;float:left;}
+   section{width:80%;height:80%;background:#E6E6FA;float:left;overflow:auto;}
+   footer{width:100%;height:10%;background:#E0FFFF;clear:left;}
+   h3{display:inline;}
+   hgroup{text-align:left;}
+   ul{list-style:none;text-align:left;}
+   img{max-width:90%;}
+   li{display:inline;}
+  </style>
+ </head>
+ <body>
+  <header>
+   <hgroup>
+    <img src="imges/ss.png" alt="" width="30px" height="100%" title="">
+    <h3>移动页面练习</h3>
+   </hgroup>
+  </header>
+  <aside>
+   <nav>
+    <ul>
+     <li><a href="" target="_blank"><img src="imges/cu.png" alt="" width="" height="" title=""></a></li>
+     <li><a href="" target="_blank"><img src="imges/ding.png" alt="" width="" height="" title=""></a></li>
+     <li><a href="" target="_blank"><img src="imges/ka.png" alt="" width="" height="" title=""></a></li>
+     <li><a href="" target="_blank"><img src="imges/tuan.png" alt="" width="" height="" title=""></a></li>
+     <li><a href="" target="_blank"><img src="imges/zhi.png" alt="" width="" height="" title=""></a></li>
+    </ul>
+   </nav> 
+  </aside>
+  <section>
+   <figure >
+    <img src="sp/sp1.png" alt="" width="85px" height="70px" title=""><img src="sp/sp2.png" alt="" width="85px" height="70px" title="">
+   </figure>
+   <figcaption>食品/家用电器</figcaption> 
+   <figure>
+    <img src="sp/sp3.png" alt="" width="85px" height="70px" title=""><img src="sp/sp4.png" alt="" width="85px" height="70px" title="">
+   </figure> 
+   <figcaption>汽车/家居生活</figcaption>
+   <figure>
+    <img src="sp/sp5.png" alt="" width="85px" height="70px" title=""><img src="sp/sp6.png" alt="" width="85px" height="70px" title="">
+   </figure>
+   <figcaption>数码/珠宝</figcaption>
+   <figure>
+    <img src="sp/sp12.png" alt="" width="85px" height="70px" title=""><img src="sp/sp22.png" alt="" width="85px" height="70px" title="">
+   </figure>
+   <figcaption>食品/家用电器</figcaption>
+   <figure>
+    <img src="sp/sp3.png" alt="" width="85px" height="70px" title=""><img src="sp/sp4.png" alt="" width="85px" height="70px" title="">
+   </figure>
+   <figcaption>汽车/家居生活</figcaption>
+   <figure>
+    <img src="sp/sp5.png" alt="" width="85px" height="70px" title=""><img src="sp/sp6.png" alt="" width="85px" height="70px" title="">
+   </figure>
+   <figcaption>数码/珠宝</figcaption>
+  </section>
+  <footer>
+   <ul>
+     <li><img src="imges/dl.png"></li>
+     <li><img src="imges/dl.png"></li>
+     <li><img src="imges/dl.png"></li>
+     <li><img src="imges/dl.png"></li>
+     <li><img src="imges/dl.png"></li>
+   </ul>
+  </footer>
+ </body>
+</html>

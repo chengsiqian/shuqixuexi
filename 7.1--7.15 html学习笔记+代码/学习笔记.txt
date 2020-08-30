@@ -1,0 +1,854 @@
+七月 HTML学习笔记和代码
+笔记：
+1.2基本格式
+
+1. <!DOCTYPE  html>  文档声明，告诉计算机这是一个HTML5文档，不分大小写但一般都这样写。
+  对比一下HTML4  的声明文档：
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"> 
+2.    <html> </html>    双标签，所有的文档内容均包含在这个标签里面。
+3.    <head></head>    不可见内容，包含文档标题、字符编码等。
+4.    <body></body>    可见内容,图片、文本表单等所有可见内容
+代码：
+<!DOCTYPE html> <!-- 文档声明 -->
+<html> <!-- 表示文档的开始 -->开始标签
+<head> head标签存放文档的基本信息，不可见元素
+ <meta charset="utf-8"> <!-- 声明字符编码 -->  
+ <title></title> <!-- 声明文档标题 -->
+      <script> alert(‘xxx’)</script> 弹出对话框输出内容“xxx”
+</head>                             
+<body> <!—body标签存放文档可见内容 -->
+</body>
+</html>                              <!--   表示文档结束 -->结束标签
+
+1.3 元素的概念与3个常用标签
+HTML 元素指的是从开始标签到结束标签的所有代码。
+
+开始标签	元素内容				结束标签
+
+<h1>	h标签用来表示标题			</h1>
+
+<p>	p标签表示一个段落			</p>
+
+<hr>	是一个单标签，会给文档加一个横线	无
+
+1.5 文本元素
+文本元素，就是讲一段文本设置成相匹配的结构和含义
+
+1.b元素： 我的作用就是 加粗文字；
+
+2.br元素： 我的作用就是强制换行；在同一个段落要换行用这个<br>
+
+3.i元素： 我的作用就是让 文字倾斜；
+
+4.del元素：我的作用就是 删除文子
+
+5.strong元素：我的作用是强调一段文本我的实际作用也是加粗文字.
+
+6.wbr元素： 我的作用是表示安全换行Theshiyigehenchanghenchangdedanci. 
+
+再来对比一下没有安全换行的文本Theshiyigehenchanghenchangdedanci. 
+
+7.em元素： 我的作用是强调，我的实际作用也是让文字倾斜 
+
+8.s元素：我的实际作用就是 删除线;从语义上来看，表示不准确的删除。
+
+9.u元素： 我的实际作用就是 给文字加下划线 
+
+10.ins元素： 我的实际作用也是 给文字加下划线；从语义上来看，是添加一段文字，起到强调作用。
+
+11.small元素： 我的作用是 添加小号字体 ，从语义上来看，用于免责声明和澄清声明。
+
+12.sub和sup元素：我们的作用就是添加下标和上标： sub表示下标：HTML5;sup表示上标我的房子100m2
+
+13.dfn元素： 我的作用从语义上看表示定义术语，是对一个词或短语的解释，实际效果就是倾斜文本
+
+14.abbr元素： 我的作用是表示一段文本的缩写,在文本显示上没有任何实际效果，比如WTO 
+
+15.q元素： 我的作用从语义上看表示引用来自其他地方的的内容， 我的实际作用就是给文本加上双引号
+
+16.code等元素： code元素用来表示计算机代码片段；function(){}
+
+var元素用来表示编程语言中的变量； num
+
+samp元素表示程序或计算机的输出您没有权限浏览该网页
+
+kbd元素表示某部分内容是由用户利用键盘输入如：请按Enter键 
+
+*这几个元素属于英文范畴，必须将lang="en",英语才能体现效果。
+
+17.ruby元素： 我的作用是表示位于表意文字上方或右方的注音符<ruby>英雄<rt>yingxiong</rt></ruby>***不常用，浏览器支持不太好，很多浏览器不支持此功能
+
+18.cite元素： 我的作用从语义上来看就是表示引用其他作品的标题。 实际效果就是文本
+
+19.bdo元素： 我的功能是设置文字方向，必需使用dir属性才可以设置，共两个值，rtl（从右到左）；ltr（从左到右）默认为ltr 
+
+rtl就是从右到左，即：right to left 
+
+20.mark元素： 我的作用是突出显示文本，用于记号， 我的实际作用就是加上一个黄色的背景。
+
+21.time元素： 我的作用从语义上来看就是表示日期和时间，例如 2015-9-18
+
+22.span元素： 我的作用就是表示一般性的文本，没有特殊效果
+
+dir 属性规定元素内容的文本方向, 共两个值，rtl（从右到左）；ltr（从左到右）默认为ltr ;
+
+dir 属性在以下标签中无效：<base>, <br>, <frame>, <frameset>, <hr>, <iframe>, <param>以及<script>
+
+1.7超链接1
+学习要点：掌握a标签建立连接的几种方式
+
+1.连接其他网址（输入要连接到的网址）
+<a href="http://www.baidu.com">1.百度一下</a><br>
+2.连接本地文档 （直接输入本地文件地址）
+<a href="1_3.html">八阵图</a><br>
+3.图片链接（必须假后缀名啊）
+<a href="http://www.baidu.com"> <img src=”图片地址.后缀名” alt=” ”> </a><br>
+这个是元素的嵌套，图片地址必须要有后缀名不然无法打开  通过点击图片会跳转到对应链接
+src属性：加图片链接地址，可以是本地的也可以是网页的；
+<img src="http://www.baidu.com/img/bdlogo.gif" />
+<img src="bdlogo.gif" />
+4.邮箱连接（服务器配置要发邮件就会自动打开）
+<a href="mailto:1048355336@qq.com">联系我</a><br>
+5.下载链接（服务器要提供下载的东西，当浏览器不能解析就是下载）
+<a href="11.tar.gz">11</a>
+目录语法：
+同一个目录：直接写文件名称或 ./文件名比如：tp.jpg或者./tp.jpg 
+在下级（子）目录：xxx/tp.jpg 
+在下下级目录：xx/xxx/tp.jpg 
+在上级（父）目录：../tp.jpg
+在上上级目录：../../tp.jpg
+1.7超链接2
+1.target属性的四个值：
+_self：点击超链接时就在当前位置打开页面，默认值；
+<a href="1_3.html" target=”_self”>八阵图</a><br>
+_blank:点击超链接时新建一个窗口打开;
+<a href=”http://www.baidu.com target=”_blank”>百度</a>
+_top(最顶层框架)和_parent(父框架)
+2.id属性：通用属性，可以理解为元素的身份证；name属性：可以理解为元素的名字
+代码：
+<a href=”#id属性值”>锚点1</a>   作用：点击上面的就会定义到下面对应的内容  
+<a href=”#id属性值”>锚点2</a>    href属性值是#+下面定义的id属性值
+<a href=”#id属性值”>锚点3</a>
+ 
+     <a id=”a”>锚点1                只有<a>标签没有结束标签
+        这里就可以输入锚点1的内容了
+      <a id=”b”>锚点2
+      锚点2内容
+     <a id=”c”>锚点3
+        锚点3内容
+
+1.9元素嵌入图片
+img的属性
+
+1.src:必要属性，指定图片来源的路径;
+2.alt属性：当图片无法显示时的替代文字；
+3.width和height属性，指定图片的宽度和高度；单位是像素px或百分比（width百分比是相对与body页面大小，heigth百分比无意义）
+<img  src=”1.png”  alt=”当图片无法显示时的替代文字”  width=”100px”  height=”100px”  title=”11221”>
+title属性
+title属性：属性值为字符串，效果是当鼠标移动到该位置时显示该内容。
+
+1.10绝对路径和相对路径
+绝对路径
+需要指出链接资源的绝对位置，与你的HTML文档的位置无关；
+1. 服务器中的位置：href="http://www.nipic.com/show/2/52/8144173k9c3cc84f.html" 
+2. 本地存储的位置：file:///D:\桌面\HTML5课程\HTML5入门实例课程\lesson9\西施.png
+
+相对路径
+如果链接资源与你的HTML文档位于同一个路径或者文件夹里，可以省略；否则必须指出相对路径，和HTML文档的位置有关；
+
+目录语法：
+同一个目录：直接写文件名称 或 ./文件名 比如：tp.jpg或者./tp.jpg 
+在下级（子）目录：xxx/tp.jpg 
+在下下级目录：xx/xxx/tp.jpg 
+在上级（父）目录：../tp.jpg
+在上上级目录：../../tp.jpg
+
+1.11列表
+无序列表
+
+1无序列表的基本格式
+<ul>定义无序列表，<li>是列表项
+ <ul> 
+<li> 列表内容</li>
+<li>列表内容</li>
+<li>列表内容</li>
+  ……………
+ </ul>
+
+2无序列表type的属性
+
+无序列表的type属性有三个值：1.disc（默认值实心小圆；2.circle空心小圆；3.square小方块
+<ul style="list-style:none">这个样式表示列表前面什么都没有
+
+<ul type=”disc”> 
+<li> 列表内容</li>
+<li>列表内容</li>
+</ul>
+<ul type=”circle”> 
+<li> 列表内容</li>
+<li>列表内容</li>
+</ul>
+
+有序列表
+1有序列表的基本格式
+<ol> 
+<li>列表内容</li>
+<li>列表内容</li>
+<li>列表内容</li>
+  ……………
+</ol>
+2有序列表的type属性
+整数（默认值）；2.大（小）写字母A\B\C...3.大小写的罗马字母：i ii .../I II III
+<ol type=”a/A”> 
+<li> 列表内容</li>
+<li>列表内容</li>
+</ol>
+<ol type=”I/i”> 
+<li>列表内容</li>
+<li>列表内容</li>
+</ol>
+3有序列表的start属性
+定义列表的开始序号，比如第一项不是数字1，而是从10开始.......
+<ol start=”10”> 
+<li>列表内容</li>
+<li>列表内容</li>
+</ol>
+4有序列表的value属性
+定义某个单个列表项的序号.......value属性是放在<li>标签里面的
+<ol type=”1”> 
+<li>列表内容</li>
+<li>列表内容</li>
+<li value=”10”>列表内容</li>
+<li>列表内容</li>
+<li value=”19”>列表内容</li>
+<li>列表内容</li>
+</ol
+自定义列表
+自定义列表项组成：由 dl定义列表；dt定义列表项目；dd定义列表内容
+<dl>
+     <dt>列表名称1</dt>
+       <dd>列表内容</dd>
+     <dt>列表名称2</dt>
+       <dd>列表内容</dd>
+     <dt>列表名称3</dt>
+       <dd>列表内容</dd>
+</dl>
+
+1.12表格元素
+学习要点：
+
+表格的基本构成
+表格的属性
+表格的合并
+
+1.表格构成的3个基本要素
+table：表格的范围，外框；用来定义表格，表格的其他元素包含在table标签里面；
+tr: 表格的行；
+td:表格的单元格 
+border属性定义表格的边框宽
+<table border=”1”>  
+<tr><td>单元格1</td><td>单元格2</td></tr>   第一行
+<tr><td>单元格1</td><td>单元格2</td></tr>   第二行
+</table>
+
+<table style=”border:1;text-align:center;margin:0”> margin属性设置页面外边距为0，margin:0; padding:0; list-style:none;全部布满网页中所有的元素的外边距和内边距都为0项目列表前的类型为无
+2.关于表格的一点说明
+HTML5中删除了HTML4中table的大部分属性，HTML5中推荐使用CSS设定原来table属性实现的效果
+
+3.th元素，为表格添加标题行
+th元素用来定义表格的标题单元格，他是tr元素的子元素，必须放在tr标签里边(和td元素一样)；tr元素的内容会自动居中对齐并加粗文字
+<table>
+     <tr><th>标题1</th><th>标题2</th><th>标题3</th></tr>   --->表格的标题
+     <tr><td>单元格1</td><td>单元格2</td></tr>   第一行
+<tr><td>单元格1</td><td>单元格2</td></tr>   第二行
+      ……………………
+</table>
+
+4.colspan元素用来横向合并单元格
+属性值为正整数，表示该单元格合横向合并的列数，语法为 <td colspan="3"> </td>则在右边两列删除2个单元格才行
+<table>
+     <tr><th colspan=”2”>标题1</th><th>标题2</th></tr>   --->表格的标题
+     <tr><td colspan=”2”>单元格1</td></tr>   第一行
+<tr><td>单元格1</td><td>单元格2</td></tr>   第二行
+      ……………………
+</table>
+
+5.rowspan元素用来纵向合并单元格
+属性值为正整数，表示该单元格合纵向向合并的行数数，语法为 <td colspan="3"></td>则在下面两行分别删除一个单元格才行
+<table>
+     <tr><th rowspan=”3”>标题1</th><th>标题2</th><th>标题3</th></tr>   
+     <tr><td >单元格1</td><td>单元格2</td></tr>   第一行
+<tr><td>单元格1</td><td>单元格2</td></tr>   第二行
+     <tr><td>标题1</td><td>标题2</td><td>标题3</td></tr>  
+     <tr><td>单元格2</td></tr>  
+<tr><td>单元格2</td></tr>   
+      ……………………
+</table>
+
+6.caption元素用来为表格添加标题
+用来制定表格的标题或者说明；是table的子元素，必须放在table中使用。
+caption的align属性可以设置标题的位置，但是，在HTML5中已经被废弃，不推荐使用
+<table border=”1”>
+<caption>表格标题</caption>
+<tr><td>单元格1</td><td>单元格2</td></tr>   第一行
+<tr><td>单元格1</td><td>单元格2</td></tr>   第二行
+</table>
+
+7.thead/tbody/tfoot元素
+thead元素：表格的表头；tfoot元素:表格的页脚；tbody元素：表格的主体；表格规范的写法应该包含这三部分内容。注：这三个主要结合CSS、javaScript来使用
+ <table border="1">
+   <caption>标题</caption>
+  <thead style=”background:blue”>  --表格的表头
+   <tr><th colspan="3">标题行1</th><th>标题行2</th></tr>
+  </thead>
+  <tbody style=”background:green”>  表格的主体
+   <tr><td>单元格1</td><td>单元格2</td><td>单元格3</td><td>单元格4</td></tr>
+   <tr><td>单元格1</td><td>单元格2</td><td>单元格3</td><td>单元格4</td></tr>
+   <tr><td>单元格1</td><td rowspan="3">单元格2</td><td>单元格3</td><td>单元格4</td></tr>
+   <tr><td>单元格1</td><td>单元格3</td><td>单元格4</td></tr>
+   <tr><td>单元格1</td><td>单元格3</td><td>单元格4</td></tr>
+   <tr><td>单元格1</td><td>单元格2</td><td>单元格3</td><td>单元格4</td></tr>
+  </tbody>
+  <tfoot style=”background:blue”>    表格的页脚
+   <tr><td>备注：</td><td colspan="3"></td></tr>
+  </tfoot>
+  </table
+
+8.colgroup元素  设置列的宽度
+
+colgroup元素用来组合列，他的span属性可以设置组合列的数目；它可以包含一个子元素 col; 
+colgroup元素为table元素的子元素，必须放在caption元素之后，thead元素之前。
+
+    <table border="1">
+   <caption>table</caption>
+   <colgroup span="1" style="width:100px"><col  style=”background:red”></colgroup>   span默认为1，表示1列，span=n表示n列都是后面的宽度，
+   <colgroup span="1" style="width:300px"></colgroup>    要设置不同列不同宽度，就像这样写几个colgroup。
+   <colgroup span="1" style="width:600px"></colgroup>
+   <thead>
+    <tr><th colspan="3">title</th></tr>
+   </thead>
+   <tbody>
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+<tr><td style=”height:25px”>单元格</td><td>单元格</td><td>单元格</td></tr>    设置这行单元格高度 
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+   </tbody>
+   <tfoot>
+    <tr><td>备注：</td><td colsapn="2"></td></tr>
+   </tfoot>
+  </table>
+
+9.col元素 是单标签，设置列的属性，如颜色
+
+col元素用来设定列的属性，他也可以使用span属性； 
+col元素一般作为colgroup元素的子元素配合使用。
+<colgroup span="1" style="width:100px"><col  style=”background:red”></colgroup>
+
+1.14特殊符号的使用
+1.HTML 实体
+
+在 HTML 中，某些字符是预留的。
+
+在 HTML 中不能使用小于号（<）和大于号（>），这是因为浏览器会误认为它们是标签。
+
+如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（character entities）。
+  实体元素：有些特殊符号浏览器是不能解析的，就要用特殊符号的实体代替，eg：
+  &#160表示一个空格，参考 《HTML实体符号参考手册》
+
+1.15 style元素与HTML样式基础
+1.外部样式表：通过 link元素引入外部样式表；
+< link  rel="stylesheet"  type="text/css" href="" >
+
+这个是css主要内容，放在<head>部位，这个两个属性的意思是：rel="stylesheet"  type="text/css"告诉浏览器这是css样式表；href=”样式地址”
+
+2.内部样式表： 
+<style type="text/css"></style>  
+ 如果有很多标签的样式都是一样，就用内部样式表，type=”text/css”这个属性的意思是告诉浏览器这个css样式，如果用内联的话那么每个p标签都要写样式，很麻烦。
+通常放在 <head>
+          <style type=”text/css”>
+           p{color:red} 
+caption{font-size:30px;color:blue}     font-size指字体大小//元素名称{属性名称：属性值}
+</style>
+</head>  
+
+3.内联样式表：
+<p style="color:red"> </p>   
+<body bgcolor=”red”></body>与<body style=”background: #F0F8FF”></body>
+
+style="text-align:center;color:bule;background:blue;"  
+ 字体居中；字体颜色是蓝色；这个标签的背景蓝色；属性名称:值与里一个属性名称:值用分号隔开，最后一个属性也要分号。所有的属性名称和值都放在style的引号里面
+
+style="font-size:50px;text-align:center;color:blue"
+区别：内联样式不但可以设定背景颜色还能讲图片设为背景
+
+1.16 内联框架
+iframe内联框架
+
+1).iframe元素用来在文档中添加一个内联框架。
+2).iframe为body元素的子元素，必须放置在body中使用
+3). 主要属性:src; name/id; width;height
+  src、width、heigth属性：
+<iframe src=”地址”  width=”500px”  height=”700px”></iframe> 
+<iframe src=”地址”  width=”50%”  height=”700px”></iframe> 
+
+width=50% 表示相对于body的50%宽，height=”50%”是不行的，因为页面的height会随着内容增加而变高，height设置百分比会出错，除非在body设置样式<body style=”height:100px”>下面iframe height才可以用百分比
+
+ name属性：
+   <a href=”http://www.baidu.com” target=”myiframe”><img src=”1.png” alt=”” title=”1”></a>
+   <iframe src=”http://www.hao123” width=”200px” height=”400px”  name=”myiframe”></iframe>
+
+如果要在iframe框架里面打开a标签定义的网址，就用到iframe的name属性，然后在a标签中target=“iframe定义的name的属性值就行”
+4).对HTML5中已经删除的属性不再进行讲解, frameborder=”1”表示边框宽度，html5删了，后面用css设计更好效果
+  <iframe src=”地址” frameborder=”1”></iframe>
+
+1.17 table布局
+关于table布局
+1).table布局是传统的网页布局方式：早期网页由于内容较少，布局简单，都是使用table布局
+2).优点:比较简单，容易理解
+3).缺点：对于复杂的布局，表格嵌套太多，比较繁琐；后期维护和修改很不方便.......
+4).table布局思路：用表格把屏幕分成几块--不同的单元格存放不同的内容
+
+1.18 div元素与布局
+1.元素的分类
+块元素:主要特征是会产生换行效果，自动与其他元素分离成两行；通常可以作为容器在内部添加其他元素。已经学过的块元素有：
+h1~h6;hr;ul;ol;p;table........
+内联元素:不会产生换行效果，会和其他元素并联排列；已经学过的内联元素有：
+b;i;br;img;.........
+
+2.div元素和布局
+div元素是通用的块元素，内部可以包含其他各种元素包括其他div元素；并且可以通过CSS设置样式来完成复杂的页面的布局。div+css
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>div元素</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+   body{background:#F0F8FF;padding:0;margin:0;}
+  </style>
+ </head>
+ <body>
+  <div style="width:100%;height:708px;">
+   <div style="background:blue;width:100%;height:10%;">我是标题头部</div>
+   <div style="background:#7FFFD4;width:20%;height:80%;float:left;">我是导航栏</div>
+   <div style="background:#6495ED;width:80%;height:80%;float:left;">我是iframe内联框架</div>
+   <div style="background:red;width:100%;height:10%;clear:left;">我是尾部</div>
+  </div>
+ </body>
+</html>
+
+1.19通用属性
+1.通用属性（所有标签都能用这些属性）
+通用属性（全局属性）可以用于任何的HTML5元素；通用属性有十几种；
+1）id
+id属性用于指定元素的识别名称，相当于一个人的身份证，是唯一的，同一个文档中不能有重复的id；
+一般配合CSS和JavaScript来选择元素。引用是“#id值”。
+用法1：用去区分相同标签，给每个标签起个唯一的别名，采用内部样式表时可以区别相同标签，使代码简洁
+<head>    相同的标签通过id值设置不同内部样式表
+<style type=”text/css”>
+ #p1{background:white;color:red;font-size:20px}
+#p2{color:red;font-size:25px}
+</style>
+</head>
+<body>
+ <p id=”p1”> 段落1</p>
+ <p id=”p2”>段落2</p2>
+</body>
+2）class
+class属性用于指定元素的类别名称，可以使用class元素给同一个文档中的多个元素进行归类，CSS就可以通过class个同一类元素设置统一的样式。
+class是用点“.class值”引用的。
+用法1：用于把多个标签的属性用一个属性代替
+ <head>  不同的标签通过class属性归为一类内部样式设置相同的属性
+<style type=”text/css”>
+ .class1{background:white;color:red;font-size:20px}
+</style>
+</head>
+<body>
+ <p class=”class1”> 段落1</p>
+ <h2 class=”class1”>标题</h2>  这样子这两个属性就完完全全相同了
+</body>
+3)  style属性
+stlyle属性用于给元素设定样式（内联样式或内部样式表）.
+4)  title属性
+title属性用于显示省略的内容（或补充/提示说明的内容）：当光标移动到元素内容上时显示title里的内容.
+5)  dir属性
+dir属性用于设定元素标签内容的文字方向.在讲文本样式的 bdo元素时候用过。
+6)  lang属性
+lang属性用于指定语言，比如中文还是英文：zh-cn/en;除了在html标签中设置，它还可以在特定元素中使用，改变该元素使用的语言.
+2.其他通用属性:
+其他通用元素还有：
+accesskey:元素快捷键
+tabindex：元素移动顺序
+draggable：元素拖动
+contenteditable:元素是否允许编辑
+hidden:隐藏元素
+spellchcheck：元素检查
+contextmenu:元素快捷菜单
+data-yourvalue：自定义属性
+
+关于属性值的几点补充：
+name和id属性：属性值必须是大小写英文字母开头；
+其余部分可以包含字母、数字、下划线、点等符号；
+属性值是区分大小写的
+属性值为数值时，必须输入正整数，不可为0 
+<body style=”margin:0;padding:0”></body>  
+width,height是属性值：如果设置为正整数时，单位默认为px（像素），不需要要加上单位；但是在style中必须注明单位，否则会出错
+
+1.20 小结与若干点补充
+学习要点：
+1.第一章HTML5基础知识做一个小结
+2.对本章课程中部分内容做几点补充
+1.基本格式
+关于基本格式大家学到这里应该已经比较熟悉了，这里需要补充一点关于meta 元素的知识点：
+1）. meta 是个单标签，它没有结束标签；meta元素也可以成为空元素。
+2）. meta元素为head元素的子元素，且只能放在head标签中使用。
+3）. meta元素重要用来附加文档的额外信息，除了使用我们熟悉的 charset="utf-8"声明字符编码外，它还有几个常用的功能
+        通过name与content属性为文件加入作者(author)描述信息（description）关键词(kewords)编码工具（generator）等信息
+        通过属性http-equiv将指定的信息以HTTP表头信息的方式送到客户端：
+例子：
+<head>
+<title></title>  定义HTML文档的题目
+<meta charset="utf-8"> 声明字符是utf-8，没有这个中文会乱码
+<meta name="author" content="author_name">  声明HTML作者
+<meta name="keywords" content="html5,js,java"> 声明HTML关键字，便于搜索工具搜到
+<meta http-equiv="refresh" content="3;1_19.html"> 刷新网页3s后跳到设置的网页
+</head>
+
+2.元素的概念
+元素指的是从开始标签到结束标签的所有代码。这一节所讲的三个常用元素 h1~h6，p, hr大家都比较熟悉，不在多说
+3.元素的属性
+属性的作用就是就为元素提供更多的信息，大多数元素都可以拥有属性。属性只可以添加到开始标签中，并对该元素内容起作用
+补充知识点：bgcolor属性与style中的background的区别；CSSz中的background可以设置复杂的背景，比如将图片设置为背景。
+<body background="picture/1.png">     background可以设置颜色也可以设置图片为背景，这个背景就是设置的图片了
+<body bgcolor=”blue”>  bgcolor只能设置颜色
+4.文本元素
+只需掌握常用的即可，其他部分用到的时候查询一下手册或其他资料。
+pre元素：保持原始格式（其实主要是保持空格和换行）
+5.超链接
+CSS中可以为 a 元素设置跟多的样式；同时它还有一些我们暂时没有讲到的属性，后边章节会涉及到......
+6.img图片
+有一些属性没有讲到，比如usemap（设置图片的热区），放到后边章节再讲。
+7.列表
+本章对列表的使用过程中用到了后边章节学习的几个知识点，大家能掌握最好，如果没有理解，后边章节中还会讲解。
+补充知识点，就是列表的嵌套：有序列表和无序列表之间可以相互嵌套.
+8.表格
+本章对列表的使用过程中用到了后边章节学习的几个知识点，大家能掌握最好，如果没有理解，后边章节中还会讲解。
+补充知识点1：表格的嵌套
+补充知识点2：了解两个HTML5中已经删除的属性：cellpadding;cellspacing。注;这些属性在CSS中设置可以达到相同甚至更好的效果。
+cellpadding设置单元格内字体到表格变宽的距离；cellspacing设置表格变框线粗，如设置为实线或双线
+<body background="white">
+  <table border="1" cellpadding=10px" cellspacing="0">
+   <caption>标题标题</caption>
+   <thead>
+    <tr><th colspan="3">小标题</th></tr>
+   </thead>
+   <tbody>
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+   </tbody>
+   <tfoot>
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+   </tfoot>
+  </table>
+ 
+ 
+<style type="text/css">  通过css内部样式也能实现
+#body1{border-collapse:collapse}
+td{padding:10px;}
+</style>
+
+9.其他
+关于iframe和div更多的用法
+
+新增的布局标签
+
+新增的布局标签可以概括为两类：用于控制页面主体内容的标签，可以划分为主体结构标签；非主体结构标签，用来放置辅助主体内容的信息。
+本套课程将按照页面的布局流程来讲解这些新标签，对于分类大家简单了解下就可以，主要还是能够掌握每个标签的用法。
+
+article标签：定义一个独立内容区块：一篇文章、一个视频文件等
+section标签：定义一个区域，如文章的章节等
+nav标签：定义目录导航
+aside标签：定义侧边栏
+figure/figcaption标签：定义一组媒体内容以及它们的标题
+header/footer标签：定义一个头部/底部
+hgroup标签：标题分组
+address标签：地址、联系信息等
+
+2.1新的布局元素(1)-header/footer
+学习要点:了解header/footer的语义和用法;使用header/footer进行一个简单的布局
+
+header\footer和div一样是块元素，本身没有属性，需要用css样式设计。
+
+body指用户看到的页面，默认时没有高度的，要设置高度其他元素才能采用百分比。
+
+header元素（标签）
+用于设置一个页面的标题部分，通常会包含标题，LOGO，导航等
+通常会放在文章的头部
+footer元素（标签）
+通常用于设置一个网页的底部区域，会包含友情链接，版权声明，文件建立日期，联系方式等
+通常会放在页面的页脚
+
+2.3新的布局元素(2)-article
+article元素（标签）
+用于定义一个独立的内容区块，比如一篇文章，一篇博客，一个帖子，论坛的一段用户评论，一篇新闻消息等.
+article元素内可以嵌套其他元素，它可以有自己的头、尾、主体等内容。使用时要特别注意内容的独立性，一般对于独立完整的内容才使用article元素，如果只是一段内容的话应该使用section元素。
+
+2.4新的布局元素(3)-section
+article元素（标签）
+用于定义一个独立的内容区块，比如一篇文章，一篇博客，一个帖子，论坛的一段用户评论，一篇新闻消息等.
+article元素内可以嵌套其他元素，它可以有自己的头、尾、主体等内容。使用时要特别注意内容的独立性，一般对于独立完整的内容才使用article元素，如果只是一段内容的话应该使用section元素。
+section元素（标签）
+用来定义文章中的章节(通常应该有标题和段落内容)
+用来定义文档中特定内容的区块，可视为一个区域分组元素，用来给页面上的内容分块。section代替div进行页面布局
+section元素可以定义文档的主体内容。
+用一句话来概括它的作用就是给内容分段，给页面分区
+注意他与div的区别，div强调在形式上的独立性，section强调的是内容上的独立性，注意它的语义。
+article元素和section元素的区别：
+语义不同
+article元素更强调内容的独立性
+section元素更强调内容的关联性
+article元素是独立完整的内容，section元素页面内容分块
+相同点
+本质上都是带有语义的div块元素
+分别可以看作<div id="section">和<div id="article">
+
+2.5新的布局元素(4)-aside/nav
+学习要点:了解aside/nav元素的语义和用法;通过实例理解aside/nav元素的用法
+aside元素：
+aside元素通常用来设置侧边栏。
+用于定义article元素之外的内容，前提是这些内容与article元素内的内容相关
+同时也可嵌套在article元素内部使用，作为主要内容的附属信息，比如与主内容有关的参考资料，名词解释等。
+nav元素：
+用来定义目录、导航栏、超链接
+并非所有的超链接都放在nav元素中，通常只把一个文档中的主导航栏放在nav中
+在文章页面中，nav还可以用来给一个文字做一个目录的超链接
+
+2.7新的布局元素(4)-time
+微格式的概念
+HTML5中的微格式，是一种利用HTML5中的新标签对网页添加附加信息的方法，附加信息例如新闻事件发生的日期和时间，文章发表的日期等。
+HTML5中的微格式是为了简化浏览器对数据的提取，方便搜索引擎的搜索.
+time元素
+time是HTML5新增的元素
+time元素代表24小时中的某个时刻或某个日期，表示时刻时允许带时差。它可以定义很多格式的日期和时间
+datetime属性中日期与时间之间要用"T"文字分隔，"T"表示时间。请注意倒数第二行，时间加上Z文字表示给机器编码时使用UTC标准时间，表示向机器编码另一地区时间，如果是编码本地时间，则不需要添加时差。
+pubdate属性是个可选标签，加上它搜索引擎/浏览器就可以很方便的识别出那个日期是文章、新闻的发表日期。
+time元素示例：
+1.<time datetime="2015-10-22">2015年10月12日</time>
+2.<time datetime="2015-10-22T20:00">2015年10月12日晚上8点</time>
+3.<time datetime="2015-10-22T20:00Z">2015年10月12日晚上8点</time>
+4.<time datetime="2015-10-22T20:00+09:00">美国时间2015年10月12日8点</time>
+
+2.8新的布局元素(5)-hgroup/addres
+hgroup元素
+通常用来给标题分组，通常放在header中；但是并非强制要求，也不是绝对的
+address元素
+通常用用来说明作者的联系信息，例如名字，E-mail，电话，地址等
+address元素中的内容会以斜体显示。
+新布局的优点
+更注重于内容而不是形式
+对人的友好：更加的语义化，高度的描述性，更加的直观，增加了代码的可读性。
+对计算机的友好：浏览器更容易解析，搜索引擎更容易抓取文档的内容
+代码更加的简洁
+
+2.9新的布局元素(6)-figure/figcaption
+figure元素
+figure/figcaption都是HTML5中新增的元素
+figure元素是一个媒体组合元素，也就是对其他的媒体元素进行分组，比如：图像、图表等等
+figcaption元素: 用来给figure元素定义标题。
+
+3.1 form元素
+form元素：
+用来定义一个表单，是建立表单的基础元素，（就类似定义表格的table）
+表单的其他元素包含在form元素中，其主要子元素有：input/button/select......
+form元素的属性
+action：指定表单内容的发送到哪里（服务器地址或URL）
+method:表单数据发送至服务器的方法，默认为get。常用的有两种：get/post
+代码：
+<!DOCTYPE html>
+<html lang="ch-zn">
+ <head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="author" content="liyue">
+  <style type="text/css">
+ 
+  </style>
+ </head>
+ <body>
+  <form action="http://managerx.biddingx.com/" method="post"target="_blank"><br>
+  <p style="text-align:center;">
+  用户名：<input type="text" name="用户名"><br>
+  密 码：<input type="password" name="密码"><br>
+   <p style="text-align:center;"><input type="submit"></p>
+   </p>
+</form>
+ </body>
+</html>
+
+get和post提交的区别：
+get方法提交，数据会附在网址之后主动提交给服务器
+post方法提交，数据不会附在网址后，会将数据打包发送给服务器，等候服务器来读取数据进行处理
+
+3.2 input元素
+学习要点:input元素及其属性
+
+input元素
+用来设置表单中的内容项，比如输入内容的文本框，按钮等
+不仅可以布置在表单中，也可以在表单之外的元素使用
+input元素的属性
+type属性：指定输入内容的类型，默认为text:单行文本框
+用户名：<input  type="text"  name="user" > 
+
+name属性:输入内容的识别名称，传递参数时候的参数名称
+  用户名：<input type="text" name="user"value="请输入用户名">
+
+value属性:默认值
+  用户名：<input type="text" name="user"value="请输入用户名">
+
+placeholder：添加文案，输入时会消失，其实就是文本框默认的文案
+maxlength:输入的最大字数
+  用户名：<input type="text" name="user"value="请输入用户名"maxlength="6">
+
+readonly属性：只读属性，设置内容不可变更，提交时会以前发送至服务器
+  国籍：<input type=”text” readonly=”readonly” value=”中国” name=”gj”>
+
+disabled属性：设置为不可用（不可操作）不会提交到服务器
+  地址示例：<input type=”text” value=”xxx省xxx市xxx区xxx街” disabled=”disabled” name=”dizhi”>
+
+required属性：设置该内容为必须填写项，否则无法提交
+        用户名：<inputtype="text" name="user" placeholder="请输入用户名" maxlength="10"required="">
+
+placeholder属性：设置默认值，当文本框获得焦点时被清空，对text/url/tel/email//password/search有效
+autocomplet属性：属性值为on/off,定义是否开启浏览器自动记忆功能
+  默认是on；
+
+  <input type=”text” name=”user”placeholder=”请输入姓名” autocomplet=”off”>
+
+autofocus属性：自动获得焦点
+accesskey属性：指定快捷键windows中，指定快捷键后，按Alt+“快捷键”,便会获得焦点
+tabindex属性：指定按Tab键时，项目间的移动顺序
+type属性值
+默认为text
+password：密码状态输入
+submit:提交按钮，点击将数据发送至服务器
+  默认是“提交”，通过value属性可以改为其他：<input type=”submit” value=”ok”>
+reset:重置按钮，默认为“重置”通过input的value属性改变默认值：
+ <input type="reset" value="清空">
+
+button:普通按钮,默认是一个框，没有字符，通过input的value属性可设置值：
+<input  type=”button”value=”ok”>
+
+image：图片式提交按钮功能和submit一样，点击后提交数据到服务器，也就是form中的action地址。
+<input type=”image” src=”**” width=”40px” height=”40px” alt=””title=””>
+
+hidden；隐藏字段
+n   该内容不会显示页面上
+
+n   一般为网页设计者设置的变量数据，提交时，隐藏内容会提交到服务器
+
+<input   type=”hidden”   name=”_token”   value=”fsdfhsaklfhalsfhfaeiurh lahfiaeuweif”>
+
+关于hidden暂时只了解这么多，以后用到的时候再详细说  
+
+email:表示要输入一个电子邮箱
+   <input  type=”email” name=”email” requiredplaceholder=”请输入邮箱地址”>
+
+·        这是HTML5新增的元素
+
+·        他会对输入内容进行验证，在之前需要编写大段的JS代码来进行这项工作
+
+·        浏览器版本比较低的话有可能不支持，不同的浏览器提示的效果可能有差异
+url:表示要输入一个网址
+    <input  type=”url” name=”url”placeholder=”请输入网址” required  >
+
+这是HTML5新增的元素
+他会对输入内容进行验证必须是http/HTTPS开头才行，在之前需要编写大段的JS代码来进行这项工作
+浏览器版本比较低的话有可能不支持，不同的浏览器提示的效果可能有差异
+tel:表示输入的内容是一个电话号码
+   没有特殊效果，但是点击该框输入法自动跳转到数字输入；
+
+   <input  type=”tel” name=”tel”placeholder=”请输入电话号码”required >
+
+这是HTML5新增的元素
+他不会对输入内容进行验证
+浏览器版本比较低的话有可能不支持，不同的浏览器提示的效果可能有差异
+number:
+购买数量：<input type=”number” min=”1” max=”10” step=”10” value=”3” name=”haha”>
+
+这是HTML5新增的
+可以配合input的max/min/step/value规定允许输入的最大值/最小值/步长/默认值
+浏览器版本比较低的话有可能不支持，不同的浏览器提示的效果可能有差异
+range(活动条)
+<input type=”range” min=”1” max=”10” step=”1” name=”h”>
+这是HTML5新增的；与number类型类似，也是表示一定范围的数值输入，但是以一个活动条的状态显示
+可以配合input的max/min/step/value规定的最大值/最小值/步长/默认值
+浏览器版本比较低的话有可能不支持，不同的浏览器提示的效果可能有差异
+时间类
+这是HTML5新增的；
+包括datetime(utc时间)/datetime-local/date/month/week/time
+浏览器版本比较低的话有可能不支持，不同的浏览器支持程度不同
+color
+这是HTML5新增的；
+可以建立一个颜色的选择输入框
+浏览器版本比较低的话有可能不支持，不同的浏览器支持程度不同
+    <input type=”color” >
+
+<formaction="" method="" target="">
+  颜色：<input type="color"value="red"><br>
+  time：<input type="time"> <br>
+  week：<input type="week"><br>
+  month:<inputtype="month"><br>
+  date:<inputtype="date"><br>
+ datetime-local:<input type="datetime-local"  ><br>
+ datetime:<input type="datetime">
+  </form>
+
+search
+<input type=”search”name=”search” placeholder=”请输入关键字”>
+这是HTML5新增的；
+用于建立一个搜索框，用来供用户输入搜素的关键词，和text区别是：search可以清空输入内容
+浏览器版本比较低的话有可能不支持，不同的浏览器支持程度不同
+file ： <input type=”file”>
+用来创建一个文件选取的输入框
+可通过accept属性规定选取文件的类型，比如图片/视频
+                        <input type=”file” accept=”image/png”>选择png格式的图片，打开文件时只会显示该格式的图片。默认只能够选择一个图片/视频等
+multipe属性可以设定一次允许选择多个文件
+                          < input type=”file” accept=”image/gif” multiple=”multipe”>
+checkbox/复选框
+用来创建一个复选框（可以多项选择）
+通过checked属性可讲某个选项设为默认的选取状态，再次单击取消选取
+例子：<input type=”checkbox” name=”a” value=”aa” checked>
+
+ <form action="" method="get">
+  <h3>你想学习的计算机技术是：</h3>
+  <input type="checkbox" name="a"value="aa">sql 2008
+  <input type="checkbox" name="b"value="bb">html5
+  <input type="checkbox" name="c"value="cc">java
+  <input type="checkbox" name="d"value="dd">c++
+  <input type="submit" value="提交你的答案">
+ </form>
+
+radio/单选框
+用来创建一个单选框（可以多项选择）
+通过checked属性可讲某个选项设为默认的选取状态，再次单击取消选取
+必须将同一组单选项设置一个相同的name属性值,否则就不能单选，所有都可以选择，同一组name名字必须一样才是才是单选。
+
+3.11 select与HTML5新增的datalist元素
+select元素
+用来建立一个下拉菜单选项列表
+不仅可以在表单中使用，还可以在其他块元素和内联元素中使用
+select只是定义一个下拉菜单列表，其具体列表项要通过option元素建立
+option元素可以用来建立一个选项，即下拉列表的一个菜单项
+
+
+
+
+
+
+
+
+
+                    

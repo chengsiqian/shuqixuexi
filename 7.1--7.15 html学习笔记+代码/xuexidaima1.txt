@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>css样式表格</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+   caption{font-size:30px;color:red}
+   td{height:25px;font-size:15px;align:center}
+   th{height:25px}
+   thead{background:blue}
+   tfoot{background:blue}
+  </style>
+ </head>
+ <body>
+  <table border="1" align="center"> 
+   <caption >特殊符号的使用</caption>
+   <colgroup span="1" style="width:100px"><col span="1" style="background:#FAEBD7"></colgroup>
+   <colgroup span="2" style="width:200px">
+    <col span="1" style="background:#00FFFF">
+    <col span="1" style="background:#8A2BE2">
+   </colgroup>
+   <colgroup span="1" style="width:100px"><col style="background:#006400"></colgroup>
+   <thead>
+    <tr><th>符号</th><th>实体名称</th><th>实体数值</th><th>描述</th></tr>
+   </thead>
+   <tbody>
+    <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>  
+    <tr><td></td><td></td><td></td><td></td></tr>  
+    <tr><td></td><td></td><td></td><td></td></tr>  
+    <tr><td></td><td></td><td></td><td></td></tr>  
+    <tr><td></td><td></td><td></td><td></td></tr>  
+    <tr><td></td><td></td><td></td><td></td></tr>  
+    <tr><td></td><td></td><td></td><td></td></tr>  
+    <tr><td></td><td></td><td></td><td></td></tr>  
+    <tr><td></td><td></td><td></td><td></td></tr>  
+    <tr><td></td><td></td><td></td><td></td></tr> 
+   </tbody>
+   <tfoot>
+    <tr><td colspan="4">其他的特殊符号大家可以在网上查看就可以。</td></tr>  
+   </tfoot>
+  </table>  
+ </body>
+</html>
